@@ -21,10 +21,10 @@
       </svg>
     </div>
     <nav class="main-nav" :class="{ open: open }">
-      <a href="/diensten">Diensten</a>
-      <a href="/over">Over</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact">Contact</a>
+      <NuxtLink @click.native="open = !open" to="/diensten">Diensten</NuxtLink>
+      <NuxtLink @click.native="open = !open" to="/over">over</NuxtLink>
+      <NuxtLink @click.native="open = !open" to="/blog">blog</NuxtLink>
+      <NuxtLink @click.native="open = !open" to="/contact">contact</NuxtLink>
       <a href="#" class="close" @click="open = !open">
         <svg
           xmlns="http://www.w3.org/2000/svg"
