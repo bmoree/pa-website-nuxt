@@ -1,0 +1,176 @@
+/* Inspiration
+https://dribbble.com/shots/15939401/attachments/7772143?mode=media
+*/
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+/* reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* animations */
+@keyframes opennav {
+  0% {
+    opacity: 0;
+    background-color: #000;
+    color: #fff;
+  }
+  25% {
+    opacity: 1;
+    background-color: #000;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #e0ecf5;
+    color: #000;
+  }
+}
+
+/* site styles */
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+main img {
+  border-radius: 8px;
+  box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.4);
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.sitenav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.sitenav .logo {
+  flex-grow: 0;
+  background-color: #e0ecf5;
+}
+
+.sitenav .logo img {
+  width: auto;
+  max-width: 80vw;
+  height: 40px;
+  object-fit: cover;
+  /* hack */
+  mix-blend-mode: multiply;
+}
+.sitenav nav {
+  display: none;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+nav.open {
+  display: flex;
+  position: fixed;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 1rem;
+  animation: opennav 1.2s;
+  animation-fill-mode: forwards;
+}
+
+nav.open .close {
+  position: absolute;
+  top: 35px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.hero {
+  background-color: #e0ecf5;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  padding: 20vh 0;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .hamburger,
+  .close {
+    display: none;
+  }
+  .sitenav nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  .sitenav nav a {
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    color: #000;
+  }
+  .sitenav nav a:hover {
+    color: #222;
+  }
+}
