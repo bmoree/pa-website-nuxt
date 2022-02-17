@@ -77,7 +77,8 @@ main img {
 }
 .container {
   max-width: 1200px;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .logo {
@@ -141,7 +142,7 @@ nav.open .close {
 
 .hero {
   background-color: #e0ecf5;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
   padding: 20vh 0;
 }
 
